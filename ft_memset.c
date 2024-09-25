@@ -1,4 +1,4 @@
-#include "libft.h"
+#include <libft.h>
 
 void	*ft_memset(void *b, int c, size_t len)
 {
@@ -7,7 +7,7 @@ void	*ft_memset(void *b, int c, size_t len)
     i = 0;
     while (i < (int)len)
     {
-        ((char *)b)[i++] = (char)c;
+        ((unsigned char *)b)[i++] = (unsigned char)c;
     }
 
     return (b);
