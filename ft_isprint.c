@@ -1,3 +1,5 @@
+#include "libft.h"
+
 int isprint(int c)
 {
     if (c >= 32 && c <= 126)

@@ -1,3 +1,5 @@
+#include "libft.h"
+
 int isascii(int c)
 {
     if (c >= 0 && c <= 127)

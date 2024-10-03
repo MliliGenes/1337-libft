@@ -1,3 +1,5 @@
+#include "libft.h"
+
 int strlen(const char *s)
 {
     int len;
