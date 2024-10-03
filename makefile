@@ -3,12 +3,28 @@ Compiler	= gcc
 CmpFlags	= -Wall -Wextra -Werror
 OUTN		= $(LIBRARY).a
 
+SRC_FILES	=	ft_bzero.c ft_isalpha.c ft_isascii.c ft_isdigit.c \
+				ft_isnum.c ft_isprint.c ft_memcpy.c ft_memset.c \
+				ft_strchr.c ft_strlen.c ft_strrchr.c ft_tolower.c \
+				ft_toupper.c
 
-SRC_DIR		= ./src
-SRC_FILES	=	ft_bzero ft_isalpha ft_isascii ft_isdigit /
-				ft_isnum ft_isprint ft_memcpy ft_memset /
-				ft_strchr ft_strlen ft_strrchr ft_tolower /
-				ft_toupper
+CFILES		= $(SRC_FILES)
+OFILES		= $(SRC_FILES:.c=.o)
 
-CFILES		= $(SRC_FILES:%=$(SRC_DIR)/%.c)
-OFILES		= $(SRC_FILES:%=$(SRC_DIR)/%.o)
+%.o: %.c libft.h
+	$(Compiler) $(CmpFlags) -c $< -o $@
+
+$(OUTN): $(OFILES)
+	ar rcs $(OUTN) $(OFILES)
+
+all: $(OUTN)
+
+clean:
+	rm -f $(OFILES)
+
+# fclean: clean
+# 	rm -f $(OUTN)
+
+# re: fclean all
+
+# .PHONY: all clean fclean re
