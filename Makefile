@@ -21,12 +21,15 @@ SRC_FILES	=	ft_isalnum.c \
 				ft_strnstr.c \
 				ft_atoi.c \
 				ft_calloc.c \
-				ft_memmove.c
+				ft_memmove.c \
+				ft_strlcpy.c \
+				ft_strlcat.c \
+				ft_strncmp.c \
 
 CFILES		= $(SRC_FILES)
 OFILES		= $(SRC_FILES:.c=.o)
 
-%.o: %.c libft.h
+%.o: %.c %.h
 	$(Compiler) $(CmpFlags) -c $< -o $@
 
 $(OUTN): $(OFILES)
