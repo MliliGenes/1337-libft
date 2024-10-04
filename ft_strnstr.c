@@ -6,14 +6,16 @@ char *ft_strnstr(const char *big, const char *little, size_t len)
     int ii;
     int little_len;
 
-    if (len < 0)
-        return (0);
+
     little_len = ft_strlen(little);
     if (little_len == 0)
         return ((char *)big);
     i = 0;
     while (i < len && big[i])
     {
+        if (i > len - little_len) 
+            break;
+    
         ii = 0;
         if (big[i] == little[ii])
         {
