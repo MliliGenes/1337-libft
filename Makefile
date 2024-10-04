@@ -20,7 +20,8 @@ SRC_FILES	=	ft_isalnum.c \
 				ft_memcmp.c \
 				ft_strnstr.c \
 				ft_atoi.c \
-				ft_calloc.c
+				ft_calloc.c \
+				ft_memmove.c
 
 CFILES		= $(SRC_FILES)
 OFILES		= $(SRC_FILES:.c=.o)
