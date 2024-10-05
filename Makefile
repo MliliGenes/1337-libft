@@ -25,6 +25,7 @@ SRC_FILES	=	ft_isalnum.c \
 				ft_strlcpy.c \
 				ft_strlcat.c \
 				ft_strncmp.c \
+				ft_substr.c \
 
 CFILES		= $(SRC_FILES)
 OFILES		= $(SRC_FILES:.c=.o)
