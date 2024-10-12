@@ -40,9 +40,3 @@ char    *ft_substr(char const *s, unsigned int start,size_t len)
     sub[i] = '\0';
     return sub;
 }
-
-// int main(int ac, char **av)
-// {
-//     char s[] = "hello, hell";
-//     printf("%s", ft_substr(s,5,4));
-// }
