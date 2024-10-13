@@ -5,6 +5,7 @@ typedef enum {
     TRUE = 1
 } Bool;
 
+
 Bool is_in_set(const char c,const char *set)
 {
     size_t i;
@@ -24,15 +25,17 @@ char *ft_strtrim(char const *s1, char const *set)
     size_t i;
     size_t ii;
     
-    if (!s1 && !set)
+    if (!s1)
         return (NULL);
+    if (!*s1)
+        return (ft_strdup(""));
     i = 0;
-    ii = ft_strlen(s1);
+    ii = ft_strlen(s1) - 1;
     while (s1[i] && is_in_set(s1[i], set) == TRUE)
         i++;
-    if (i == ii)
+    if (i > ii)
         return (ft_strdup(""));
-    while (ii < i && is_in_set(s1[ii], set) == TRUE)
+    while (ii > i && is_in_set(s1[ii], set) == TRUE)
         ii--;
-     return (ft_substr(s1, i, (ii - i)));
+    return (ft_substr(s1, i, (ii - i + 1)));
 }

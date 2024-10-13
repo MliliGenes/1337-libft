@@ -1,23 +1,5 @@
 #include "libft.h"
 
-
-char    *ft_strdup(char *s)
-{
-    char *c;
-    size_t i;
-    size_t s_len;
-
-    i = 0;
-    s_len = ft_strlen(s);
-    c = malloc(s_len + 1);
-    if (!c)
-        return (NULL);
-    while (i < s_len)
-        c[i++] = s[i];
-    c[i] = '\0';
-    return c;
-}
-
 char    *ft_substr(char const *s, unsigned int start,size_t len)
 {
     char *sub;

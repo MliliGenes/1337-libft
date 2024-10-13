@@ -26,6 +26,7 @@ SRC_FILES	=	ft_isalnum.c \
 				ft_strlcat.c \
 				ft_strncmp.c \
 				ft_substr.c \
+				ft_strdup.c \
 				ft_strjoin.c \
 				ft_strtrim.c \
 
