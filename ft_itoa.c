@@ -35,7 +35,7 @@ void filling_set(char *int_str,int n,int len)
         int_str[len--] = (char)((p_n % 10) + '0');
         p_n /= 10;
     }
-    if (p_n > 0)
+    if (n > 0)
         int_str[0] = (char)((p_n % 10) + '0');
 }
 
