@@ -1,4 +1,8 @@
 #include "libft.h"
+#include <stdio.h>
+#include <string.h>
+#include <limits.h>
+#include <stdlib.h>
 
 void count_digits(int n, size_t *i)
 {   
@@ -43,7 +47,6 @@ char *ft_itoa(int n)
 {
     size_t nb_size;
     char *int_str;
-    unsigned int p_n;
 
     if (n==0)
     {

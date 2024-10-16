@@ -3,7 +3,7 @@ Compiler	= gcc
 CmpFlags	= -Wall -Wextra -Werror
 OUTN		= $(Library).a
 
-SRC_FILES    =    ft_isalnum.c \
+SRC_FILES    =  ft_isalnum.c \
                 ft_strlen.c \
                 ft_memcpy.c  \
                 ft_isalpha.c \
@@ -30,7 +30,7 @@ SRC_FILES    =    ft_isalnum.c \
                 ft_strjoin.c \
                 ft_strtrim.c \
                 ft_split.c \
-				ft_itoa.c \
+				ft_itoa.c
 
 
 CFILES		= $(SRC_FILES)
